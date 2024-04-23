@@ -34,7 +34,7 @@ if (json_last_error() != JSON_ERROR_NONE) {
 //auth   
 $obj = new Delete();
 
-$result = $obj->delete_sales($data->salesId);
+$result = $obj->delete_construction($data->buildingName);
 
 // Handle errors
 if ($result === false) {
@@ -43,4 +43,4 @@ if ($result === false) {
 
 // Send the result
 echo json_encode($result);
-?>
+?> 

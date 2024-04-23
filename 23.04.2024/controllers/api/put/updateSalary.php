@@ -4,6 +4,7 @@ include_once '../../../config/database.php';
 include_once '../../../config/header.php';
 include_once '../../../models/put.php';
 
+
 // if (file_exists($modelsPath) && file_exists($headersPath)) {
 //     require_once $modelsPath;
 //     require_once $headersPath;
@@ -20,11 +21,14 @@ $data = json_decode(file_get_contents('php://input'));
 //auth   
 $obj = new Put();
 
-$result = $obj->update_purchasepaymentDetails(
-    $data->purchase_id,
+$result = $obj->update_salaryDetails(
+    $data->employee_id,
+    $data->mobile_no,
+    $data->employee_name,
+    $data->wages_type,
+    $data->salary_amount,
     $data->paid_amount,
-    $data->balance_amount,
-
+    $data->payment_method,
 );
 // Handle errors
 if ($result === false) {

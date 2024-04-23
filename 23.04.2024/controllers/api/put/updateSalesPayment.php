@@ -20,8 +20,8 @@ $data = json_decode(file_get_contents('php://input'));
 //auth   
 $obj = new Put();
 
-$result = $obj->update_purchasepaymentDetails(
-    $data->purchase_id,
+$result = $obj->update_salespaymentDetails(
+    $data->sales_id,
     $data->paid_amount,
     $data->balance_amount,
 

@@ -34,7 +34,9 @@ if (json_last_error() != JSON_ERROR_NONE) {
 //auth   
 $obj = new Delete();
 
-$result = $obj->delete_sales($data->salesId);
+$result = $obj->delete_vehicle($data->vehicleNo);
+
+
 
 // Handle errors
 if ($result === false) {
